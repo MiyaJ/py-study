@@ -5,8 +5,9 @@
 # @Desc    : 函数和字符串的应用
 
 import random
-import string
 from os.path import splitext
+import os
+import time
 
 # 例子1：设计一个生成指定长度验证码的函数。
 print('例子1：设计一个生成指定长度验证码的函数')
@@ -43,3 +44,11 @@ print(get_suffix('abcd.sql.md'))
 print(get_suffix('.ignore'))
 
 print(get_suffix2('abcd.txt'))
+
+# 例子3：在终端中显示跑马灯（滚动）文字。
+content = '北京欢迎你'
+while True:
+    os.system('cls')
+    print(content)
+    time.sleep(1)
+    content = content[1:] + content[0]
